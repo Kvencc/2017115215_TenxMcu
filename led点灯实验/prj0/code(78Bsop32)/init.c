@@ -23,7 +23,8 @@ void SysInit() {
   _nop_();
   _nop_();
   // IO 模式初始化
-  P1MODL = 0xaa;
+  P1MODL = 0xa8;
+  P1_0 = 1;
   // IO 状态初始化
   F_ledOff();
 }
