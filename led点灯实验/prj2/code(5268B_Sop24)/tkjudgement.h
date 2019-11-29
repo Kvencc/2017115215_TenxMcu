@@ -1,0 +1,13 @@
+void TkJudgement(unsigned char uctkcount);
+void ChangeToSlowClk(void);
+void ChangeToFastClk(void);
+void InitialIoport(void);
+int TkConversion(unsigned char TkCh);
+void GetBaseline(unsigned char uctkcount);
+unsigned char TkChannelSelection(unsigned char TkIndex);
+void TkChannelReset(unsigned char TkIndex);
+void CheckNoise(unsigned char uctkcount);
+void TkStatusOutput(unsigned char uctkcount);
+void InitialRegister(void);
+void TKScan(void);
+void PRO_SLEEP20MS(void);

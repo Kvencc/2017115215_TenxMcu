@@ -1,0 +1,20 @@
+//zhengzhuang
+#define D_font0 0x3F
+#define D_font1 0x06
+#define D_font2 0x5B
+#define D_font3 0x4F
+#define D_font4 0x66
+#define D_font5 0x6D
+#define D_font6 0x7D
+#define D_font7 0x07
+#define D_font8 0x7F
+#define D_font9 0x6F
+#define D_fontBar	0x40	//-
+#define D_fontBlank 0x00
+#define D_fontB		0x7c
+#define D_fontE		0x79
+#define D_fontF		0x71
+#define D_fontN   	0x37
+#define D_fontO		0x3F
+#define D_fontC		0x39
+#define D_fontNotC	0x0F
