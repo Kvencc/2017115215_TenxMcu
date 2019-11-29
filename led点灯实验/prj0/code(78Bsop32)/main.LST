@@ -1,0 +1,36 @@
+C51 COMPILER V9.60.0.0   MAIN                                                              11/30/2019 00:57:52 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\SIngelChip\Keil_C51\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #define __main_c
+   2          #include "includeAll.h"
+*** ERROR C141 IN LINE 17 OF main.h: syntax error near 'msCount', expected ')'
+   3          //=============================================================================
+   4          void main() {
+   5   1        SysInit();
+   6   1        VarsInit();
+   7   1      
+   8   1        while (1) {
+   9   2          F_turnOnWDT();
+  10   2          // user coding
+  11   2          F_ledOff();
+  12   2          delayMs(500);
+  13   2          F_ledOn();
+  14   2          delayMs(500);
+  15   2        }
+  16   1      }
+  17          //=============================================================================
+  18          void delayMs(uint16_t msCount) {
+  19   1        for (uint16_t i = 0; i < msCount; i++) {
+  20   2          for (uint16_t j = 0; j < 1000; j++) {
+  21   3            /* code */
+  22   3          }
+  23   2        }
+  24   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)
