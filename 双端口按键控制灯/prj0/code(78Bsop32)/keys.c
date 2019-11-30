@@ -2,12 +2,13 @@
 #include "includeAll.h"
 //=============================================================================
 void GetKeys() {
-  static uint8_t tmpKeyValue = D_keyNull;
+  static uint8_t tempKeyValue = D_keyNull;
 
+  DelayMs(5);
   if (P_key1 == 0) {
-    tmpKeyValue = D_keyValue1;
+    tempKeyValue = D_keyValue1;
   } else {
-    keyValue = tmpKeyValue;
-    tmpKeyValue = D_keyNull;
+    keyValue = tempKeyValue;
+    tempKeyValue = D_keyNull;
   }
 }
