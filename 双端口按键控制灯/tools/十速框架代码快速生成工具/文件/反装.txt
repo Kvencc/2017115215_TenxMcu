@@ -1,0 +1,19 @@
+//fanzhuang
+#define D_font0 0x3F
+#define D_font1 0x30
+#define D_font2 0x5B
+#define D_font3 0x79
+#define D_font4 0x74
+#define D_font5 0x6D
+#define D_font6 0x6F
+#define D_font7 0x38
+#define D_font8 0x7F
+#define D_font9 0x7D
+#define D_fontBar	0x40	//-
+#define D_fontBlank 0x00
+#define D_fontB		0x67
+#define D_fontE		0x4f
+#define D_fontF		0x4e
+#define D_fontN     0x3e
+#define D_fontO		0x3F
+#define	D_fontDu 	0xcc

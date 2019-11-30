@@ -1,0 +1,14 @@
+[Project Data state]
+SYSCFG = 02 10 10 
+FLASH_E = 1
+FLASH_P = 1
+FLASH_V = 1
+AP_MESS = 0
+ICE_MESS = 0
+
+[Project LCD state]
+LCD_VIEW = 0
+LCD PAT PATH = C:\Keil\lib\Pat\ICEBM.PAT
+LCD WIN HWND = 0
+LCD TICK = 17467291
+LCD LCD PATH = C:\Users\e66\Desktop\5274_Ñ§Ï°°å\5274_demo_code\test.LCD
