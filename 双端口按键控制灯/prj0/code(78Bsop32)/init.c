@@ -2,6 +2,7 @@
 #include "includeAll.h"
 //=============================================================================
 void SysInit() {
+  F_clearWDT();
   //时钟初始化
   CLKCON = 0x03; // Clock div 1
   STPPCK = 0;
