@@ -15,11 +15,17 @@ uint8_t keyValue1;
 uint8_t keyValue2;
 uint8_t keyValue3;
 uint8_t keyValue4;
+uint8_t sign;
+uint8_t temp1 = 0;
+uint8_t temp2 = 0;
+uint8_t temp3 = 0;
+uint8_t temp4 = 0;
 #else
 extern uint8_t keyValue1;
 extern uint8_t keyValue2;
 extern uint8_t keyValue3;
 extern uint8_t keyValue4;
+extern uint8_t sign;
 #endif
 
 // Action Macro: exp: #define F_getData() ------
