@@ -3,6 +3,7 @@
 //HAL--------------------
       #define P_buzz    P1_5
       #define F_buzz()  P_buzz = ~P_buzz
+
 //Const--------------------
     #define D_buzzLastTime   25    //25*4ms(T0) = last 100ms per Buzz
     #define D_buzzIntervalTime   250 //250*4ms(T0) = Interval 1s between buzzs
@@ -22,4 +23,5 @@
 //Function----------------------
 	void BuzzCount(uint8_t count);
     void Buzz();
+
 #endif
