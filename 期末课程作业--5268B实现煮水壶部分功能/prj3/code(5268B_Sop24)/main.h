@@ -9,6 +9,11 @@
 // Globle Var -----------------------------------------
 #ifdef __main_c
 bit bLedFlash ;
+uint16_t index = 0;
+uint16_t time1 = 10;
+uint8_t i;
+ uint8_t gewei = 0;
+ uint8_t ten = 0;
 #else
 extern bit bLedFlash;
 #endif

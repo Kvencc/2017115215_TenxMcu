@@ -8,6 +8,8 @@ void main() {
   //使能看门狗
   F_turnOnWDT();
 
+  
+
   while (1) {
     //喂狗
     F_clearWDT();
@@ -28,10 +30,12 @@ void TimeProcess() {
     b1ms = 0;
     timer5ms++;
     second++;
+  
   }
   if (timer5ms >= D_5ms) {
     // 5ms 执行一次
     timer5ms = 0;
+    
     GetKeys();
   }
   if (second >= D_1000ms) {
@@ -46,55 +50,86 @@ void TimeProcess() {
 void TaskProcess() {}
 //=============================================================================
 void TaskSetting() {
+  
   if (D_keyValue1 == keyValue1) {
     ledflg = ~ledflg;
+    TR0 = 1;
+    index++;
+      if(index == 100)
+      {
+        index = 0;
+      }
+    
   }
   keyValue1 = D_keyNull;
 
 
   if (D_keyValue1 == keyValue2) {
     ledflg = ~ledflg;
+    TR0 = 1;
+    index++;
+      if(index == 100)
+      {
+        index = 0;
+      }
   }
   keyValue2 = D_keyNull;
-
+   
 
   if (D_keyValue1 == keyValue3) {
     ledflg = ~ledflg;
+    TR0 = 1;
+    index++;
+      if(index == 100)
+      {
+        index = 0;
+      }
   }
   keyValue3 = D_keyNull;
   
 
   if (D_keyValue1 == keyValue4) {
     ledflg = ~ledflg;
+    TR0 = 1;
+    index--;
+      if(index < 0)
+      {
+        index = 1;
+      }
+          
   }
-  keyValue4 = D_keyNull;
+ keyValue4 = D_keyNull;
 }
+
+//if (D_keyValue1 == keyValue4) {
+  // F_buzzOn;     //推挽输出状态控制蜂鸣器
+  //}else {
+   //F_buzzOff;
+  //}
+
 //=============================================================================
 void DisplayProcess() {
-  static uint16_t secon = 0;
+
  
-  // F_ledOn();
   if (ledflg) {
     
     F_led1Off();
-    if (secon <= 10) {
-    // 1s 执行一次
-    
-    F_buzz();
-    secon++;
-    }
-    secon = 0;
-    
-  }
-    
+    F_led2On();
+    gewei = index % 10;
+    ten = (index-gewei)/10;
+    smg_control(gewei,2);
+    smg_control(ten,1);
+
+
+  }  
   else {
-    if (secon <= 10) {
-    // 1s 执行一次
-    
-    F_buzz();
-    secon++;
-    }
-    F_led1On();
-    secon = 0;
+     F_led1On();
+    F_led2Off();
+    gewei = index%10;
+    ten = (index-gewei)/10;
+    smg_control(gewei,2);
+    smg_control(ten,1);
   }
+    
+
 }
