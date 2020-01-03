@@ -25,6 +25,14 @@ void INT0_int(void) interrupt 0 {
 void TIMER0_int(void) interrupt 1 {
   TF0 = 0; // clear interrupt flag
   //------------
+	time++;//1ms
+	F_buzz();
+	if(time == 50)
+	{
+		//p1_5 = 1;
+		time = 0;
+		TR0 = 0;
+	}
 }
 //=============================================================================
 // Function:	void INT1_int(void)

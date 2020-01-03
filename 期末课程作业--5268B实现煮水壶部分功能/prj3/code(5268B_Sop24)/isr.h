@@ -10,6 +10,7 @@ bit b1ms;
 volatile uint8_t vData;
 //uint8_t vData;
 uint8_t gData;
+uint8_t time = 0;
 #else
 extern bit b1ms;
 extern volatile uint8_t vData;
