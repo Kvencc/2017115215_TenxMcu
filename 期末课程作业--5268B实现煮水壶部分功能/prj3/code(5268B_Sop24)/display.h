@@ -2,15 +2,26 @@
 #define __display_h
 // Hal: exp: #define P_led P10 -----------------
 #define P_led P1_0
-#define P_led1 P1_2
-#define P_led2 P1_4
-#define P_smg P1_4
+#define P_led2 P1_2
+#define P_led1 P1_4
+
+#define P_smgcon1 P1_1
+#define P_smgcon2 P1_6
+#define P_smga P1_4
+#define P_smgb P3_4
+#define P_smgc P3_5
+#define P_smgd P1_7
+#define P_smge P3_6
+#define P_smgf P1_2
+#define P_smgg P3_2
+#define P_smgdg P1_3
 // Const: exp: #define D_data 1 ----------------
 #define D_ledOn 1  //高电位亮
 #define D_ledOff 0 //低点位灭
 // Globle Var -----------------------------------------
 #ifdef __display_c
-unsigned char code dofly_DuanMa[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};
+uint16_t tempKeyValue5 = 0;
+uint16_t tempKeyValue4 = 0 ;
 // 显示段码值01234567
 #else
 
@@ -24,7 +35,7 @@ unsigned char code dofly_DuanMa[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,
 #define F_led2On() P_led2 = D_ledOn
 #define F_led2Off() P_led2 = D_ledOff
 #define F_ledNeg() P_led = ~P_led
-#define F_smg()
-// Function ------------------------------------
 
+// Function ------------------------------------
+void smg_control(int num,int smg);
 #endif
